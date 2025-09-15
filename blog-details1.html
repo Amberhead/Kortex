@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>KortexCore</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="blog-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <img src="assets/img/kclogo.png" alt="">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <!-- <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+        </ul> -->
+        <!-- <i class="mobile-nav-toggle d-xl-none bi bi-list"></i> -->
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Blog Details1</li>
+          </ol>
+        </nav>
+        <h1>Blog Details</h1>
+      </div>
+    </div><!-- End Page Title -->
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-8 service-details-box">
+
+          <!-- Blog Details Section -->
+          <section id="blog-details" class="blog-details section">
+            <div class="" data-aos="fade-up">
+
+              <article class="article">
+
+                <div class="hero-img" data-aos="zoom-in">
+                  <img src="assets/img/blog/coldemail2.png" alt="Featured blog image" class="img-fluid" loading="lazy">
+                  <div class="meta-overlay">
+                    <div class="meta-categories">
+                      <a href="#" class="category">Cold Email</a>
+                      <span class="divider">•</span>
+                      <span class="reading-time"><i class="bi bi-clock"></i>5 min read</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="article-content" data-aos="fade-up" data-aos-delay="100">
+                  <div class="content-header">
+                    <h1 class="title">Why Your Cold Emails Aren’t Working: 11 Deliverability Hacks You Must Know</h1>
+
+                    <div class="author-info">
+                      <div class="author-details">
+                        <div class="info">
+                          <h4>Akangsha Phukan</h4>
+                        </div>
+                      </div>
+                      <div class="post-meta">
+                        <span class="date"><i class="bi bi-calendar3"></i> April 25, 2025</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="content">
+                    <p class="lead">
+                      If your cold emails are getting zero replies, chances are Gmail’s AI is quietly deleting them. It’s not just about what you send—it’s about how you send it.
+                    </p>
+
+                    <p>
+                      After learning the hard way, we’ve developed a system focused entirely on deliverability. Below are the 11 key signals we religiously monitor to ensure our emails land in the inbox and not in the spam folder.
+                    </p>
+
+                    <h2>1️⃣ Use a Dedicated SMTP on VPS</h2>
+                    <p>
+                      Forget shared tools.
+                    </p>
+                    <p>We set up Postfix on a private VPS with a dedicated IP.</p>
+                    <p>This ensures:</p>
+                    <p>✅ Gmail sees a clean, consistent sender</p>
+
+                    <p>✅ No third-party tool fingerprints</p>
+
+                    <p>📈 Inbox placement skyrocketed</p>
+
+                    <h2>2️⃣ Advanced DNS Setup</h2>
+                    <p>
+                      SPF, DKIM, and DMARC are just the basics.
+                    </p>
+                    <p>We went further by implementing:</p>
+                    <p>🔁 PTR Records (Reverse DNS)</p>
+
+                    <p>🔄 FCrDNS (Forward-Confirmed Reverse DNS)</p>
+                    <p>These prove your IP belongs to your domain. Gmail loves this level of authenticity.</p>
+
+                    <h2>3️⃣ Manual Warm-Up + Slow Scaling</h2>
+                    <p>
+                      We don’t rush.
+                    </p>
+                    <p>We went further by implementing:</p>
+                    <p>Started sending 5–10 plain-text emails per day, with:</p>
+
+                    <p>📨 No links</p>
+                    <p>🧾 No HTML</p>
+                    <p>👤 Only real human messages</p>
+                    <p>Once reply rates stayed consistent, we scaled slowly over 45 days.</p>
+                    <h2>4️⃣ Mimic Human-Like Rate-Limiting and Greylisting</h2>
+                    <p>
+                      To appear legitimate, we:
+                    </p>
+                    <p>🐌 Slowed burst sending</p>
+                    <p>🔁 Accepted retry attempts (like real mail servers)</p>
+
+                    <p>This tricks Gmail into thinking we’re human, not a bot.</p>
+                    <h2>5️⃣ Live Monitoring Dashboard</h2>
+                    <p>
+                      We track key metrics every single day:
+                    </p>
+                    <p>🚫 Spam complaints (Spamcop, AOL, etc.)</p>
+                    <p>📉 IP/domain reputation</p>
+
+                    <p>📬 Open, reply, and bounce rates</p>
+                    <p>🌡️ Domain “temperature” by provider</p>
+                    <p>⚠ Any suspicious spike? We pause, reroute, or restart warm-up.</p>
+                    <h2>6️⃣ Smart IP Rotation</h2>
+                    <p>
+                      If one IP gets too “hot,” we:
+                    </p>
+                    <p>🔥 Rotate to a fresh IP</p>
+                    <p>💡 Maintain steady reputation and deliverability</p>
+
+                    
+                    <h2>6️⃣ Smart IP Rotation</h2>
+                    <p>
+                      If one IP gets too “hot,” we:
+                    </p>
+                    <p>🔥 Rotate to a fresh IP</p>
+                    <p>💡 Maintain steady reputation and deliverability</p>
+
+
+                    <h2>7️⃣ Consistent Sending Windows</h2>
+                    <p>
+                      Forget 2 AM mass blasts.
+                    </p>
+                    <p>We send emails at realistic business hours to build predictable sending patterns Gmail trusts.</p>
+
+
+                    <h2>8️⃣ Daily Inbox Placement Testing</h2>
+                    <p>
+                      We run tests across major email providers:
+                    </p>
+                    <p>📧 Gmail</p>
+                    <p>📨 Outlook</p>
+                    <p>💼 Zoho</p>
+                    <p>🛡️ Proton</p>
+                    <p>This helps us avoid “silent” spam folder traps.</p>
+
+
+                    <h2>9️⃣ Human, Clean Copywriting</h2>
+                    <p>
+                      No AI-polished templates or “quick question” openers.
+                    </p>
+                    <p>We write:</p>
+                    <p>Natural tone</p>
+                    <p>Light typos</p>
+                    <p>Lowercase subject lines</p>
+                    <p>This ensures Gmail doesn’t flag our emails as templated or robotic.</p>
+
+
+                    <h2>🔟 Cut Out Spam Triggers</h2>
+                    <p>
+                      We eliminate:
+                    </p>
+                    <p>⛔ Link shorteners</p>
+                    <p>⏳ Scheduling tools</p>
+                    <p>📢 Pushy CTAs</p>
+                    <p>Google flags these faster than you’d expect.</p>
+
+
+                    <h2>1️⃣1️⃣ Warmy.io = Our Secret Weapon</h2>
+                    <p>
+                      We use Warmy to:
+                    </p>
+                    <p>🤖 Detect deliverability risks</p>
+                    <p>🎯 Auto-warm 150K+ emails every month</p>
+                    <p>🌍 Support multiple languages</p>
+                    <p>🧑‍💼 Hands-off operation until inbox placement is stable</p>
+                    <p>It’s our silent guardian operating in the background.</p>
+
+
+                  </div>
+                </div>
+
+              </article>
+
+            </div>
+          </section><!-- /Blog Details Section -->
+
+
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container copyright text-center mt-4">
+      <p>©<strong class="px-1 sitename">KortexCore</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <div class="social-links d-flex">
+            <a href="https://x.com/KortexCore" target="_blank"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/people/KortexCore/61561456094040/" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/kortexcore?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/kortexcore-marketing/" target="_blank"><i class="bi bi-linkedin"></i></a>
+          </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
