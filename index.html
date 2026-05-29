@@ -19,6 +19,16 @@
   <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4b9ff450-5ecc-488a-9c72-3f17dcf9e193/id-preview-d82bb209--6631b50e-3f1f-4d77-975c-9e34f08380dd.lovable.app-1776975606212.png">
   <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4b9ff450-5ecc-488a-9c72-3f17dcf9e193/id-preview-d82bb209--6631b50e-3f1f-4d77-975c-9e34f08380dd.lovable.app-1776975606212.png">
   <meta name="twitter:card" content="summary_large_image">
+  <script>
+  (function() {
+    var p = window.location.search.slice(1)
+      .split('&').filter(function(p){ return p.slice(0,2) === 'p=' })[0];
+    if (p !== undefined) {
+      p = decodeURIComponent(p.slice(2));
+      window.history.replaceState(null, null, '/demoTry2' + p);
+    }
+  })();
+</script>
 </head>
 
   <body>
