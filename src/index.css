@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 224 60% 4%;
+    --foreground: 210 40% 98%;
+
+    --card: 224 55% 7%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 224 60% 5%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 230 100% 62%;
+    --primary-foreground: 230 60% 4%;
+
+    --secondary: 224 50% 12%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 224 40% 10%;
+    --muted-foreground: 215 25% 70%;
+
+    --accent: 230 100% 68%;
+    --accent-foreground: 230 60% 4%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 40% 18%;
+    --input: 215 40% 14%;
+    --ring: 195 100% 55%;
+
+    --radius: 0.75rem;
+
+    /* Brand tokens */
+    --neon-cyan: 190 100% 55%;
+    --neon-blue: 215 100% 60%;
+    --neon-purple: 270 90% 65%;
+    --neon-green: 145 85% 55%;
+    --neon-yellow: 48 100% 60%;
+    --neon-gold: 42 100% 58%;
+
+    --bg-deep: 224 65% 3%;
+    --bg-mid: 224 60% 5%;
+    --bg-soft: 224 50% 9%;
+
+    --gradient-hero: radial-gradient(ellipse 75% 60% at 50% 0%, hsl(232 95% 32% / 0.95), hsl(258 70% 18% / 0.55) 40%, transparent 78%),
+                     linear-gradient(180deg, hsl(228 60% 5%) 0%, hsl(228 70% 3%) 60%, hsl(228 80% 2%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(230 100% 62%), hsl(220 100% 72%));
+    --gradient-gold: linear-gradient(135deg, hsl(48 100% 60%), hsl(35 100% 55%));
+    --gradient-card: linear-gradient(160deg, hsl(220 50% 9% / 0.9), hsl(222 60% 5% / 0.9));
+
+    --glow-cyan: 0 0 24px hsl(195 100% 55% / 0.55), 0 0 48px hsl(195 100% 55% / 0.25);
+    --glow-blue: 0 0 24px hsl(215 100% 60% / 0.5), 0 0 48px hsl(215 100% 60% / 0.22);
+    --glow-gold: 0 0 28px hsl(45 100% 55% / 0.65), 0 0 60px hsl(40 100% 55% / 0.3);
+    --glow-soft: 0 8px 40px hsl(195 100% 55% / 0.18);
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--gradient-hero);
+    background-attachment: fixed;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .text-gradient-cyan {
+    background: linear-gradient(135deg, hsl(224 100% 65%), hsl(220 100% 78%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(48 100% 65%), hsl(35 100% 55%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .glow-cyan { box-shadow: var(--glow-cyan); }
+  .glow-blue { box-shadow: var(--glow-blue); }
+  .glow-gold { box-shadow: var(--glow-gold); }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(hsl(215 60% 20% / 0.18) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(215 60% 20% / 0.18) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .panel {
+    background: var(--gradient-card);
+    border: 1px solid hsl(215 50% 22% / 0.6);
+    backdrop-filter: blur(8px);
+  }
+
+  .neon-btn {
+    background: var(--gradient-cta);
+    color: hsl(var(--primary-foreground));
+    box-shadow: var(--glow-cyan);
+    transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+  }
+  .neon-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+    box-shadow: 0 0 32px hsl(195 100% 55% / 0.8), 0 0 80px hsl(195 100% 55% / 0.35);
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 18px hsl(45 100% 55% / 0.5), 0 0 40px hsl(40 100% 55% / 0.25); }
+    50% { box-shadow: 0 0 32px hsl(45 100% 60% / 0.85), 0 0 80px hsl(40 100% 55% / 0.5); }
+  }
+  .pulse-gold { animation: pulseGlow 2.4s ease-in-out infinite; }
+
+  @keyframes pulseSoft {
+    0%, 100% { opacity: 0.85; }
+    50% { opacity: 1; }
+  }
+  .pulse-soft { animation: pulseSoft 2.6s ease-in-out infinite; }
+
+  @keyframes flowDash {
+    to { stroke-dashoffset: -200; }
+  }
+  .flow-dash { stroke-dasharray: 4 8; animation: flowDash 3s linear infinite; }
+
+  @keyframes spinSlow { to { transform: rotate(360deg); } }
+  .spin-slow { animation: spinSlow 18s linear infinite; }
+
+  @keyframes floatY {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  .float-y { animation: floatY 6s ease-in-out infinite; }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  .scrollbar-none::-webkit-scrollbar { display: none; }
+  .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+@media (min-width: 768px) {
+  .animate-marquee-left,
+  .animate-marquee-right {
+    animation-duration: 22s;
+  }
+}
